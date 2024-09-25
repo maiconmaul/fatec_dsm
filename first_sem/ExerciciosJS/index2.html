@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Exercício 2</title>
+</head>
+<body>
+  <header>
+    <h3>Lista de exercícios</h3>
+    <h4>Nome: Maicon Santos</h4>
+    <ol>
+      <li><a href="./index1.html">Exercício 1</a></li>
+      <li><a href="./index2.html">Exercício 2</a></li>
+      <li><a href="./index3.html">Exercício 3</a></li>
+      <li><a href="./index4.html">Exercício 4</a></li>
+    </ol>
+  </header>
+  <main>
+    <label for="baseTriangulo">Base:</label>
+    <input type="number" name="baseTriangulo" id="baseTriangulo">
+    <br>
+    <br>
+    <label for="alturaTriangulo">Altura:</label>
+    <input type="number" name="alturaTriangulo" id="alturaTriangulo">
+    <br>
+    <br>
+    <label for="areaTriangulo">Área do Triângulo:</label>
+    <input type="text" id="areaTriangulo" name="areaTriangulo" placeholder="Área" readonly>
+    <br>
+    <br>
+    <button onclick="calcularAreaTriangulo()" >Calcular</button>
+    <button onclick="limparExercicio2()" >Limpar</button>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+  text-align: center;
+}
+
+img {
+  width: 30%;
+  margin: 0 35% 0 35%;
+}
+
+.work-section table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  letter-spacing: 1px;
+  width: 100%;
+}
+
+.work-section table thead {
+  background-color: rgb(180 180 180);
+  border-bottom: 2px solid rgb(140 140 140);
+  text-align: left;
+  font-size: 20px;
+}
+
+.work-section table thead th {
+  padding: 2.5px 0 2.5px 10px;
+}
+
+
+.work-section table tbody td {
+  padding: 10px;
+  border: 1px solid #000;
+}

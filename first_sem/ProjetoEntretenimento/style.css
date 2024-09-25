@@ -1,0 +1,114 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+.header-container {
+  height: 60px;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.header-container h2 {
+  color: white;
+}
+
+section h3 {
+  font-size: 20px;
+  color: rgb(165, 165, 37);
+  background-color: black;
+  padding: 10px;
+}
+
+.header-container ul {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+}
+
+.header-container li {
+  text-decoration: none;
+
+}
+
+.header-container li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+}
+
+.header-container li a:hover {
+  background-color: rgb(213, 183, 142);
+}
+
+.main-container section {
+  padding: 20px;
+}
+
+.main-container section hr {
+  background-color: rgb(213, 183, 142);
+  height: 4px;
+  margin-bottom: 10px;
+}
+
+.main-container section#videos .video-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.main-container section#videos h4 {
+  margin-bottom: 10px;
+}
+
+.main-container section#audios {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container section#audios h4 {
+  margin: 25px 0px 10px;
+}
+
+.main-container section#audios audio {
+  width: 100%;
+}
+
+.main-container section#fotos .images-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.main-container section#fotos figure {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container section#youtube .iframe-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.main-container section#youtube p {
+  margin-bottom: 10px;
+  text-decoration: underline;
+}

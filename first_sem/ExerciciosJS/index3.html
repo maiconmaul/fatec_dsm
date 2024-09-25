@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Exercício 3</title>
+</head>
+<body>
+  <header>
+    <h3>Lista de exercícios</h3>
+    <h4>Nome: Maicon Santos</h4>
+    <ol>
+      <li><a href="./index1.html">Exercício 1</a></li>
+      <li><a href="./index2.html">Exercício 2</a></li>
+      <li><a href="./index3.html">Exercício 3</a></li>
+      <li><a href="./index4.html">Exercício 4</a></li>
+    </ol>
+  </header>
+  <main>
+    <label for="alphaGrade">Nota (peso 30%):</label>
+    <input type="number" name="alphaGrade" id="alphaGrade">
+    <br>
+    <br>
+    <label for="betaGrade">Nota (peso 70%):</label>
+    <input type="number" name="betaGrade" id="betaGrade">
+    <br>
+    <br>
+    <label id="weightedAvarage">Média Ponderada: </label>
+    <br>
+    <br>
+    <button onclick="calcularMediaPonderada()" >Calcular</button>
+    <button onclick="limparExercicio3()" >Limpar</button>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>

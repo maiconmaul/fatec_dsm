@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <title>Projeto Entretenimento</title>
+</head>
+
+<body>
+  <header class="header-container">
+    <h2>Algo Diferente</h2>
+    <nav>
+      <ul>
+        <li><a href="#audios">Áudios</a></li>
+        <li><a href="#videos">Vídeos</a></li>
+        <li><a href="#fotos">Fotos</a></li>
+        <li><a href="#youtube">YouTube</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <section id="audios">
+      <h3>Audios</h3>
+      <hr>
+      <h4>Discovery</h4>
+      <audio src="./assets/__Discovery.mp3" controls></audio>
+      <h4>Awakening</h4>
+      <audio src="./assets/_Awakening.mp3" controls></audio>
+    </section>
+
+    <section id="videos">
+      <h3>Videos</h3>
+      <hr>
+      <div class="video-container">
+        <div>
+          <h4>Hamster da Angelina</h4>
+          <video width="300" src="./assets/Kinder_Hamster.mp4" controls></video>
+        </div>
+        <div>
+          <h4>Big Buck Bunny</h4>
+          <video width="300" src="./assets/mov_bbb.mp4" controls></video>
+        </div>
+      </div>
+    </section>
+
+    <section id="fotos">
+      <h3>Fotos</h3>
+      <hr>
+      <div class="images-container">
+        <figure>
+          <img width="300px" src="./assets/foto1.jpg" alt="cachorro deitado sobre uma toalha vermelha">
+          <caption>cachorro deitado sobre uma toalha</caption>
+        </figure>
+        <img width="300px" src="./assets/foto2.jpg" alt="foto aerea de santorini">
+        <img width="300px" src="./assets/foto3.jpg" alt="barco a vela distante no oceano">
+        <img width="300px" src="./assets/foto4.jpg" alt="topo de torre de relogio">
+      </div>
+    </section>
+    <section id="youtube">
+      <summary>
+        <h3>YouTube</h3>
+        <hr>
+        <p>Veja vídeos sobre o mundo:</p>
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/MKUrAHOcKUI" frameborder="0"></iframe>
+          <iframe src="https://www.youtube.com/embed/w_DKWlrA24k" frameborder="0"></iframe>
+        </div>
+      </summary>
+    </section>
+  </main>
+</body>
+
+</html>

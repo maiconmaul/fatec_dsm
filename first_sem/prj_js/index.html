@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p id="p1">Texto a ser modificado</p>
+  <p id="p2">outro paragrafo</p>
+  <label for="numero">Número: </label>
+  <br />
+  <input type="number" name="numEntrada" id="numero">
+  <br />
+  <br />
+  <label for="total">Resultado: </label>
+  <br />
+  <input type="text" id="total" name="Resultado">
+  <br />
+  <input type="button" value="MULT *5" onclick="multiplcarPorCinco()">
+  <br />
+  <input type="button" value="DIVI  /5" onclick="dividirPorCinco()">
+  <br />
+  <input type="button" value="zerar" onclick="">
+
+  <script>
+    function dobrar() {
+      varX = document.getElementById("p1");
+      varY = document.getElementById("p2");
+      varNum = document.getElementById("numero");
+
+      totalG = Number(varNum.value) * 2;
+      document.getElementById("total").value = totalG;
+    }
+
+    function multiplcarPorCinco() {
+      varX = document.getElementById("p1");
+      varY = document.getElementById("p2");
+      varNum = document.getElementById("numero");
+
+      totalG = Number(varNum.value) * 5;
+      document.getElementById("total").value = totalG;
+    }
+
+    function dividirPorCinco() {
+      varX = document.getElementById("p1");
+      varY = document.getElementById("p2");
+      varNum = document.getElementById("numero");
+
+      totalG = Number(varNum.value) / 5; 
+      document.getElementById("total").value = totalG;
+    }
+  </script>
+
+</body>
+
+</html>
