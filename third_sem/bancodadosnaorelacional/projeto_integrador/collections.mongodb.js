@@ -2,6 +2,7 @@
 use('projeto_integrador');
 db.families.insertMany([
   {
+    _id: ObjectId('64f8a56b7b1e8f001c6a1c5e'),
     family_name: "Silva",
     address: {
       street: "Rua da Liberdade",
@@ -41,6 +42,7 @@ db.families.insertMany([
     ]
   },
   {
+    _id: ObjectId("64f8a56b7b1e8f001c6a1c5d"),
     family_name: "Oliveira",
     address: {
       street: "Avenida São Paulo",
@@ -80,6 +82,7 @@ db.families.insertMany([
     ]
   },
   {
+    _id: ObjectId("64f8a56b7b1e8f001c6a1c60"),
     family_name: "Costa",
     address: {
       street: "Rua São Sebastião",
@@ -190,8 +193,10 @@ db.families.insertMany([
 use('projeto_integrador');
 db.events.insertMany([
   {
+    _id: ObjectId("64f8a56b7b1e8f001c6a1c61"),
     name: "Feijoada Solidária",
     date: new Date("2024-09-30"),
+    status: "CONCLUIDO",
     location: {
       address: {
         street: "Rua Afonso Vergueiro",
@@ -209,8 +214,10 @@ db.events.insertMany([
     description: "Evento beneficente para arrecadar fundos para a compra de cestas básicas."
   },
   {
+    _id: ObjectId("64f8a56b7b1e8f001c6a1c62"),
     name: "Campanha do Agasalho",
     date: new Date("2024-08-20"),
+    status: "CANCELADO",
     location: {
       address: {
         street: "Avenida Ipanema",
@@ -228,8 +235,10 @@ db.events.insertMany([
     description: "Campanha para arrecadação de agasalhos para o inverno."
   },
   {
+    _id: ObjectId("64f8a56b7b1e8f001b6a1c62"),
     name: "Feira de Livros",
     date: new Date("2024-07-15"),
+    status: "CONCLUIDO",
     location: {
       address: {
         street: "Rua Santa Clara",
@@ -250,6 +259,7 @@ db.events.insertMany([
     _id: ObjectId("64f8a56b7b1e8f001c6a1c64"),
     name: "Doação de Alimentos",
     date: new Date("2024-10-05"),
+    status: "PENDENTE",
     location: {
       address: {
         street: "Avenida General Carneiro",
@@ -270,6 +280,7 @@ db.events.insertMany([
     _id: ObjectId("64f8a56b7b1e8f001c6a1c65"),
     name: "Arrecadação de Brinquedos",
     date: new Date("2024-12-01"),
+    status: "PENDENTE",
     location: {
       address: {
         street: "Rua dos Andradas",
@@ -297,7 +308,14 @@ db.partners.insertMany([
       {
         name: "Ana Paula",
         email: "ana.paula@ab.org.br",
-        phone: "(15) 99876-5432"
+        phone: "(15) 99876-5432",
+        position: "Tesoureira"
+      },
+      {
+        name: "João Silva",
+        email: "joao.silva@ab.org.br",
+        phone: "(15) 99999-9999",
+        position: "Presidente"
       }
     ],
     email: "contato@ab.org.br",
@@ -308,7 +326,8 @@ db.partners.insertMany([
     contact_person: [{
       name: "João Pedro",
       email: "joao.pedro@ajuda.org.br",
-      phone: "(15) 99876-4321"
+      phone: "(15) 99876-4321",
+      position: "Contador"
     }],
     email: "ajuda@ajuda.org.br",
     phone: "(15) 99876-9876"
@@ -318,7 +337,8 @@ db.partners.insertMany([
     contact_person: [{
       name: "Mariana Souza",
       email: "mariana.souza@livros.org.br",
-      phone: "(15) 98765-4321"
+      phone: "(15) 98765-4321",
+      position: "Secretária"
     }],
     email: "contato@livros.org.br",
     phone: "(15) 98765-1234"
@@ -329,7 +349,8 @@ db.partners.insertMany([
       {
         name: "Lucas Gomes",
         email: "lucas.gomes@roupas.org.br",
-        phone: "(15) 99876-6543"
+        phone: "(15) 99876-6543",
+        position: "Secretário"
       }
     ],
     email: "contato@roupas.org.br",
@@ -340,7 +361,8 @@ db.partners.insertMany([
     contact_person: [{
       name: "Julia Ramos",
       email: "julia.ramos@saudebem.org.br",
-      phone: "(15) 98765-7654"
+      phone: "(15) 98765-7654",
+      position: "Secretária"
     }],
     email: "contato@saudebem.org.br",
     phone: "(15) 98765-9876"
@@ -355,9 +377,15 @@ db.donations.insertMany([
       id: ObjectId("64f8a56b7b1e8f001c6a1c5e"),
       name: "Familia Silva"
     },
-    amount: 5.00,
+    amount: 0.00,
     donation_date: new Date("2024-09-23"),
     purpose: "Fornecimento de cestas básicas para famílias em Sorocaba",
+    items: [
+      {
+        name: "Cesta de alimentos",
+        quantity: 10
+      }
+    ],
     event: {
       id: ObjectId("64f8a56b7b1e8f001c6a1c61"),
       name: "Feijoada Solidária"
@@ -368,9 +396,19 @@ db.donations.insertMany([
       id: ObjectId("64f8a56b7b1e8f001c6a1c5d"),
       name: "Familia Oliveira"
     },
-    amount: 10.00,
+    amount: 0.00,
     donation_date: new Date("2024-08-15"),
     purpose: "Doação de roupas para crianças carentes",
+    items: [
+      {
+        name: "Calça infantil",
+        quantity: 5
+      },
+      {
+        name: "Camiseta adulto",
+        quantity: 3
+      }
+    ],
     event: {
       id: ObjectId("64f8a56b7b1e8f001c6a1c62"),
       name: "Campanha do Agasalho"
@@ -381,11 +419,17 @@ db.donations.insertMany([
       id: ObjectId("64f8a56b7b1e8f001c6a1c60"),
       name: "Familia Costa"
     },
-    amount: 1.00,
+    amount: 0.00,
     donation_date: new Date("2024-07-10"),
     purpose: "Doação de cadeira de rodas",
+    items: [
+      {
+        name: "Cadeira de rodas",
+        quantity: 1
+      }
+    ],
     family: {
-      id: ObjectId("64f8a56b7b1e8f001c6a1c60"),
+      id: ObjectId("64f8a56b7b1e8f001c6a1c5e"),
       name: "Familia Silva"
     }
   },
@@ -394,7 +438,7 @@ db.donations.insertMany([
       id: ObjectId("64f8a56b7b1e8f001c6a1c70"),
       name: "Familia Souza"
     },
-    amount: 8.00,
+    amount: 50.00,
     donation_date: new Date("2024-10-02"),
     purpose: "Doação de alimentos para famílias carentes",
     event: {
@@ -407,7 +451,7 @@ db.donations.insertMany([
       id: ObjectId("64f8a56b7b1e8f001c6a1c71"),
       name: "Familia Santos"
     },
-    amount: 15.00,
+    amount: 30.00,
     donation_date: new Date("2024-10-04"),
     purpose: "Compra de roupas para inverno",
     event: {

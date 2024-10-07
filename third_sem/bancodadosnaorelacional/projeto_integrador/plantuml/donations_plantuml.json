@@ -4,12 +4,30 @@
     "id": "ObjectId(64f8a56b7b1e8f001c6a1c5e)",
     "name": "Familia Silva"
   },
-  "amount": 5.00,
+  "amount": 0.00,
   "donation_date": "2024-09-23T00:00:00Z",
   "purpose": "Fornecimento de cestas básicas para famílias em Sorocaba",
+  "items": [
+    {
+      "name": "geladeira",
+      "quantity": 1.00
+    },
+    {
+      "name": "colchão",
+      "quantity": 2.00
+    },
+    {
+      "name": "cesta basica",
+      "quantity": 3.00
+    }
+  ],
   "event": {
     "id": "ObjectId(64f8a56b7b1e8f001c6a1c61)",
     "name": "Feijoada Solidária"
+  },
+  "family" : {
+    "id": "ObjectId(64f8a56b7b1e8f001c6a1c61)",
+    "name": "Familia Santos"
   }
 }
 @endjson

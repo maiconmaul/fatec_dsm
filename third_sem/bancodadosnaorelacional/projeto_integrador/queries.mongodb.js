@@ -56,10 +56,11 @@ db.donations.aggregate([
   },
   {
     $project: {
-      donator: 1,
       amount: 1,
+      items: 1,
       "event_details.name": 1,
       "event_details.date": 1,
+      "event_details.status": 1,
       "event_details.description": 1
     }
   }
@@ -81,7 +82,8 @@ db.families.aggregate([
       family_name: 1,
       "donations_made.amount": 1,
       "donations_made.donation_date": 1,
-      "donations_made.purpose": 1
+      "donations_made.purpose": 1,
+      "donations_made.items": 1
     }
   }
 ]);

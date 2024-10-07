@@ -5,7 +5,14 @@
     {
       "name": "Ana Paula",
       "email": "ana.paula@ab.org.br",
-      "phone": "(15) 99876-5432"
+      "phone": "(15) 99876-5432",
+      "position": "Tesoureira"
+    },
+    {
+      "name": "João da Silva",
+      "email": "joao.silva@ab.org.br",
+      "phone": "(15) 99999-9999",
+      "position": "Presidente da instituição"
     }
   ],
   "email": "contato@ab.org.br",
