@@ -20,7 +20,7 @@ db.events.find(
   { name: 1, date: 1, description: 1 }
 );
 
-// Encontrar todas as doações acima de R$ 5,00
+// Encontrar todas as doações de dinheiro acima de R$ 5,00
 use('projeto_integrador');
 db.donations.find(
   { amount: { $gt: 5.00 } },
