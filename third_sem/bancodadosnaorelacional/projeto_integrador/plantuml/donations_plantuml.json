@@ -1,0 +1,15 @@
+@startjson
+{
+  "donator": {
+    "id": "ObjectId(64f8a56b7b1e8f001c6a1c5e)",
+    "name": "Familia Silva"
+  },
+  "amount": 5.00,
+  "donation_date": "2024-09-23T00:00:00Z",
+  "purpose": "Fornecimento de cestas básicas para famílias em Sorocaba",
+  "event": {
+    "id": "ObjectId(64f8a56b7b1e8f001c6a1c61)",
+    "name": "Feijoada Solidária"
+  }
+}
+@endjson

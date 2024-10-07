@@ -1,4 +1,5 @@
 // Coleção de Families
+use('projeto_integrador');
 db.families.insertMany([
   {
     family_name: "Silva",
@@ -123,10 +124,70 @@ db.families.insertMany([
         classification: "jovem"
       },
     ]
+  },
+  {
+    _id: ObjectId("64f8a56b7b1e8f001c6a1c70"),
+    family_name: "Souza",
+    address: {
+      street: "Rua das Flores",
+      number: 200,
+      neighborhood: "Jardim América",
+      city: "Sorocaba",
+      state: "SP",
+      postal_code: "18025-010",
+      geo: {
+        type: "Point",
+        coordinates: [-47.4300, -23.5155]
+      }
+    },
+    phone: "(15) 94455-7788",
+    members: [
+      {
+        first_name: "Paulo",
+        last_name: "Souza",
+        email: "paulo.souza@email.com",
+        phone: "(15) 94455-7788",
+        classification: "adulto"
+      },
+      {
+        first_name: "Laura",
+        last_name: "Souza",
+        email: "laura.souza@email.com",
+        phone: "(15) 94455-7788",
+        classification: "jovem"
+      }
+    ]
+  },
+  {
+    _id: ObjectId("64f8a56b7b1e8f001c6a1c71"),
+    family_name: "Santos",
+    address: {
+      street: "Avenida Itavuvu",
+      number: 350,
+      neighborhood: "Jardim Santa Bárbara",
+      city: "Sorocaba",
+      state: "SP",
+      postal_code: "18075-500",
+      geo: {
+        type: "Point",
+        coordinates: [-47.4605, -23.5200]
+      }
+    },
+    phone: "(15) 94567-1212",
+    members: [
+      {
+        first_name: "Fabiana",
+        last_name: "Santos",
+        email: "fabiana.santos@email.com",
+        phone: "(15) 94567-1212",
+        classification: "adulto"
+      }
+    ]
   }
 ]);
 
 // Coleção de Events
+use('projeto_integrador');
 db.events.insertMany([
   {
     name: "Feijoada Solidária",
@@ -184,10 +245,51 @@ db.events.insertMany([
       }
     },
     description: "Feira de livros para incentivar a leitura em comunidades carentes."
+  },
+  {
+    _id: ObjectId("64f8a56b7b1e8f001c6a1c64"),
+    name: "Doação de Alimentos",
+    date: new Date("2024-10-05"),
+    location: {
+      address: {
+        street: "Avenida General Carneiro",
+        number: 750,
+        neighborhood: "Vila Jardini",
+        city: "Sorocaba",
+        state: "SP",
+        postal_code: "18030-200"
+      },
+      geo: {
+        type: "Point",
+        coordinates: [-47.4675, -23.5140]
+      }
+    },
+    description: "Evento para arrecadação de alimentos não perecíveis."
+  },
+  {
+    _id: ObjectId("64f8a56b7b1e8f001c6a1c65"),
+    name: "Arrecadação de Brinquedos",
+    date: new Date("2024-12-01"),
+    location: {
+      address: {
+        street: "Rua dos Andradas",
+        number: 101,
+        neighborhood: "Centro",
+        city: "Sorocaba",
+        state: "SP",
+        postal_code: "18010-040"
+      },
+      geo: {
+        type: "Point",
+        coordinates: [-47.4560, -23.5030]
+      }
+    },
+    description: "Arrecadação de brinquedos para o natal."
   }
 ]);
 
 // Coleção de Partners
+use('projeto_integrador');
 db.partners.insertMany([
   {
     name: "Associação Beneficente",
@@ -220,10 +322,33 @@ db.partners.insertMany([
     }],
     email: "contato@livros.org.br",
     phone: "(15) 98765-1234"
+  },
+  {
+    name: "Roupas de Inverno",
+    contact_person: [
+      {
+        name: "Lucas Gomes",
+        email: "lucas.gomes@roupas.org.br",
+        phone: "(15) 99876-6543"
+      }
+    ],
+    email: "contato@roupas.org.br",
+    phone: "(15) 99876-3210"
+  },
+  {
+    name: "Saúde e Bem-Estar",
+    contact_person: [{
+      name: "Julia Ramos",
+      email: "julia.ramos@saudebem.org.br",
+      phone: "(15) 98765-7654"
+    }],
+    email: "contato@saudebem.org.br",
+    phone: "(15) 98765-9876"
   }
 ]);
 
 // Donations
+use('projeto_integrador');
 db.donations.insertMany([
   {
     donator: {
@@ -263,5 +388,32 @@ db.donations.insertMany([
       id: ObjectId("64f8a56b7b1e8f001c6a1c60"),
       name: "Familia Silva"
     }
+  },
+  {
+    donator: {
+      id: ObjectId("64f8a56b7b1e8f001c6a1c70"),
+      name: "Familia Souza"
+    },
+    amount: 8.00,
+    donation_date: new Date("2024-10-02"),
+    purpose: "Doação de alimentos para famílias carentes",
+    event: {
+      id: ObjectId("64f8a56b7b1e8f001c6a1c64"),
+      name: "Doação de Alimentos"
+    }
+  },
+  {
+    donator: {
+      id: ObjectId("64f8a56b7b1e8f001c6a1c71"),
+      name: "Familia Santos"
+    },
+    amount: 15.00,
+    donation_date: new Date("2024-10-04"),
+    purpose: "Compra de roupas para inverno",
+    event: {
+      id: ObjectId("64f8a56b7b1e8f001c6a1c62"),
+      name: "Campanha do Agasalho"
+    }
   }
 ]);
+

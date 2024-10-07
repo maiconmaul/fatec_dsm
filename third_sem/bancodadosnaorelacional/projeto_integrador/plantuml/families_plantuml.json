@@ -1,0 +1,41 @@
+@startjson
+{
+  "family_name": "Silva",
+  "address": {
+    "street": "Rua da Liberdade",
+    "number": 123,
+    "neighborhood": "Centro",
+    "city": "Sorocaba",
+    "state": "SP",
+    "postal_code": "18010-320",
+    "geo": {
+      "type": "Point",
+      "coordinates": [-47.4578, -23.5015]
+    }
+  },
+  "phone": "(15) 93211-1234",
+  "members": [
+    {
+      "first_name": "Carlos",
+      "last_name": "Silva",
+      "email": "carlos.silva@email.com",
+      "phone": "(15) 93211-1234",
+      "classification": "adulto"
+    },
+    {
+      "first_name": "Ana",
+      "last_name": "Silva",
+      "email": "ana.silva@email.com",
+      "phone": "(15) 93211-1234",
+      "classification": "pne"
+    },
+    {
+      "first_name": "Clara",
+      "last_name": "Silva",
+      "email": null,
+      "phone": "(15) 93211-1234",
+      "classification": "crianca"
+    }
+  ]
+}
+@endjson

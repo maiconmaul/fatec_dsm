@@ -1,0 +1,14 @@
+@startjson
+{
+  "name": "Associação Beneficente",
+  "contact_person": [
+    {
+      "name": "Ana Paula",
+      "email": "ana.paula@ab.org.br",
+      "phone": "(15) 99876-5432"
+    }
+  ],
+  "email": "contato@ab.org.br",
+  "phone": "(15) 99876-1234"
+}
+@endjson

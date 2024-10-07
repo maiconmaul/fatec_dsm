@@ -1,0 +1,21 @@
+@startjson
+{
+  "name": "Feijoada Solidária",
+  "date": "2024-09-30T00:00:00Z",
+  "location": {
+    "address": {
+      "street": "Rua Afonso Vergueiro",
+      "number": 320,
+      "neighborhood": "Centro",
+      "city": "Sorocaba",
+      "state": "SP",
+      "postal_code": "18035-370"
+    },
+    "geo": {
+      "type": "Point",
+      "coordinates": [-47.4522, -23.5026]
+    }
+  },
+  "description": "Evento beneficente para arrecadar fundos para a compra de cestas básicas."
+}
+@endjson
