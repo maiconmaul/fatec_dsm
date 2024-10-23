@@ -11,7 +11,12 @@ function totalPagar() {
 }
 
 function imprimir() {
-  window.print();
+  let totalElement = document.getElementById('total')
+  if( totalElement.value != '' ) {
+    window.print()
+  } else {
+    alert('Por favor, preencha todos os dados.')
+  }
 }
 
 function calculateExtras() {
@@ -38,5 +43,42 @@ function calculateDeliveryFee() {
 }
 
 function convertToCurrency(value) {
-  return value.toLocaleString("pt-BR", { style: 'currency', currency: "BRL" });
+  return value.toLocaleString("pt-BR", { style: 'currency', currency: "BRL" })
 }
+
+// MARK:- IGNORAR DAQUI PRA BAIXO:
+function applyPhoneMask(input) {
+  input.addEventListener('input', function(event) {
+    let value = event.target.value
+    
+    // Remove tudo que não seja número
+    value = value.replace(/\D/g, '')
+
+    // Não aplica a máscara se o usuário está apagando (valor vazio)
+    if (value.length === 0) {
+      event.target.value = ''
+      return
+    }
+
+    // Adiciona a máscara conforme o comprimento dos números
+    if (value.length > 10) {
+      // Formato para (99) 99999-9999
+      value = value.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3')
+    } else if (value.length > 5) {
+      // Formato para (99) 9999-9999
+      value = value.replace(/^(\d{2})(\d{4})(\d{0,4})$/, '($1) $2-$3')
+    } else if (value.length > 2) {
+      // Formato parcial para (99) 9999
+      value = value.replace(/^(\d{2})(\d{0,5})$/, '($1) $2')
+    } else {
+      // Formato parcial para (99
+      value = value.replace(/^(\d*)$/, '($1')
+    }
+
+    event.target.value = value
+  })
+}
+
+// Chama a função para aplicar a máscara ao campo de telefone
+const phoneInput = document.getElementById('telefone')
+applyPhoneMask(phoneInput)
