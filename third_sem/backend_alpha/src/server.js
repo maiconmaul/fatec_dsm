@@ -10,11 +10,13 @@ const app = express()
 
 app.use(express.json())
 
+app.use('/teste', dbTestRoutes)
+
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use('/api', userRoutes)
 app.use('/api', eventRoutes)
-app.use('/api', dbTestRoutes)
+
 
 const PORT = process.env.PORT
 app.listen(PORT, () => {
