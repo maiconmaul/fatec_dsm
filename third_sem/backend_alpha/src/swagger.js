@@ -1,18 +1,17 @@
 const swaggerJSDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 
-// Definição básica do Swagger
 const options = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'API Documentação', // Nome da API
-      version: '1.0.0',          // Versão da API
-      description: 'Documentação da API usando Swagger', // Descrição
+      title: 'API Documentação',
+      version: '1.0.0',
+      description: 'Documentação da API usando Swagger',
     },
     servers: [
       {
-        url: 'http://localhost:3000/api', // URL base da API
+        url: 'http://localhost:3000/api',
         description: 'Servidor Local',
       },
     ],
@@ -31,7 +30,7 @@ const options = {
       },
     ],
   },
-  apis: ['./src/routes/*.js'], // Caminho para os arquivos onde estão as rotas e descrições
+  apis: ['./src/routes/*.js'],
 };
 
 const swaggerSpec = swaggerJSDoc(options);
